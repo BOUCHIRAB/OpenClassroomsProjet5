@@ -1,0 +1,49 @@
+@import "../../assets/variable.scss";
+
+.slidecontenair {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 1240px;
+  height: 415px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    width: 335px;
+    height: 255px;
+  }
+  &_arrow {
+    border: none;
+    background: none;
+    padding: 23px;
+    &-img {
+      width: 46.68px;
+      height: 79.2px;
+      @media (max-width: 1024px) {
+        width: 32px;
+        height: 60px;
+      }
+      @media (max-width: 768px) {
+        width: 12px;
+        height: 20px;
+      }
+    }
+  }
+  &_number {
+    color: white;
+    padding-top: 358px;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 500;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

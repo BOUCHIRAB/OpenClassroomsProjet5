@@ -1,0 +1,39 @@
+@import "../../assets/variable.scss";
+
+.navbar {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 50px 0;
+  width: 100%;
+  max-width: 1240px;
+  @media (max-width: 768px) {
+    margin: 20px 50px 27px 50px;
+  }
+
+  &_link {
+    font-family: $main-font;
+    font-size: 24px;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 136px 116px;
+    text-align: center;
+    gap: 27px;
+    @media (max-width: 768px) {
+      font-size: 12px;
+      text-transform: uppercase;
+      grid-template-columns: 55px 66px;
+      gap: 26px;
+      align-items: center;
+    }
+  }
+  &_img {
+    width: 210px;
+    height: 68px;
+    @media (max-width: 768px) {
+      width: 145px;
+      height: 47px;
+    }
+  }
+}
