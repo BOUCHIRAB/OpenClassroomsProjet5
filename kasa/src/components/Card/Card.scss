@@ -2,12 +2,14 @@
 
 .gallery {
   margin: 43px 0px 50px 0px;
-  padding: 56px 0px 18px 0px;
+  padding-top: 31px;
+  padding-bottom: 20px;
   background-color: #f6f6f6;
   border-radius: 30px;
   max-width: 1240px;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 
   @media (max-width: 1024px) {
     display: flex;
@@ -21,50 +23,83 @@
     align-items: center;
     background-color: white;
     margin: 0;
-    padding-top: 22px;
-
-    padding-bottom: 0px;
+    padding: 0px 0px 18px 0px;
   }
 }
 
-.gallery div {
+.gallery_card {
   position: relative;
-}
-
-div .imggallery {
-  position: relative;
-  z-index: 1;
-  height: 340px;
-  width: 340px;
-  padding-right: 10px;
-  padding-left: 50px;
-  border-radius: 10px;
-  object-fit: cover;
-  @media (max-width: 1024px) {
-    margin-left: 0px;
-    padding-left: 0px;
+  padding: 25px 10px 25px 50px;
+  max-width: 340px;
+  max-height: 340px;
+  width: 100%;
+  transition-duration: 600ms;
+  &:hover {
+    transform: scale(1.05);
   }
   @media (max-width: 768px) {
-    width: 335px;
-    height: 255px;
-    margin-left: 0px;
-    padding-left: 0px;
+    padding: 25px 0 25px 0;
   }
-}
+  .imggallery {
+    position: relative;
+    z-index: 1;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    object-fit: cover;
 
-.imggallery_title {
-  position: absolute;
-  z-index: 2;
-  top: -50px;
-  font-family: $main-font;
-  font-size: 18px;
-  font-weight: 700;
-  color: #f6f6f6;
-  width: 300px;
-  padding-left: 69px;
+    @media (max-width: 1024px) {
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+    @media (max-width: 768px) {
+      width: 335px;
+      height: 255px;
+      margin: 0;
+      padding: 0px;
+    }
+  }
 
-  @media (max-width: 768px) {
-    padding-left: 19px;
-    padding-bottom: 0px;
+  &--shadow {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(10, 10, 10, 0) 42%,
+      rgba(4, 4, 4, 0.205) 99.99%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+
+    border-radius: 15px;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    bottom: 28px;
+    margin: 0;
+    padding: 0px;
+    @media (max-width: 768px) {
+      width: 334px;
+      height: 255px;
+      margin: 0;
+      padding: 0px;
+    }
+  }
+  .imggallery_title {
+    position: absolute;
+    z-index: 2;
+    top: 300px;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f6f6f6;
+    width: 300px;
+    padding-left: 20px;
+
+    @media (max-width: 768px) {
+      padding-left: 19px;
+      padding-bottom: 0px;
+      top: 220px;
+    }
   }
 }

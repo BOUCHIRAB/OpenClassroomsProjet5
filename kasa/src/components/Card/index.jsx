@@ -14,6 +14,7 @@ function Card() {
               className="imggallery"
               alt="House picture"
             ></img>
+            <div className="gallery_card--shadow"></div>
           </Link>
           <div className="imggallery_title">{logement.title}</div>
         </div>

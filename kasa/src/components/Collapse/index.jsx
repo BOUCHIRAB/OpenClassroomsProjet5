@@ -5,35 +5,45 @@ import { useState } from "react"
 import PropTypes from "prop-types"
 import vector from "../../assets/Vector.png"
 
-function Collapse({ contenttitle, contenttext }) {
+function Collapse({ contenttitle, contenttext, classCollapse }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const [ClassState, setClassState] = useState("btnClose")
-
+  const [ClassArrow, setClassArrow] = useState("btnsub_down")
   return (
     <ul className="accordion">
-      <li className="has-sub">
-        <div className="libsub">
+      <li key={contenttitle.index} className="has-sub">
+        <div className={classCollapse}>
           <span>{contenttitle}</span>
           {isOpen ? (
-            <button
-              className="btnsub"
-              onClick={() => setIsOpen(false) & setClassState("btnClose")}
+            <a
+              href="#"
+              onClick={() =>
+                setIsOpen(false) &
+                setClassState("btnClose") &
+                setClassArrow("btnsub_down")
+              }
+              className={ClassArrow}
             >
               <img src={vector} alt="vector"></img>
-            </button>
+            </a>
           ) : (
-            <button
-              className="btnsub"
-              onClick={() => setIsOpen(true) & setClassState("btnOpen")}
+            <a
+              href="#"
+              className={ClassArrow}
+              onClick={() =>
+                setIsOpen(true) &
+                setClassState("btnOpen") &
+                setClassArrow("btnsub_up")
+              }
             >
               <img src={vector} alt="vector"></img>
-            </button>
+            </a>
           )}
         </div>
 
-        <ul className={ClassState}>
-          <li>{contenttext}</li>
+        <ul key={contenttext.index} className={ClassState}>
+          <span>{contenttext}</span>
         </ul>
       </li>
     </ul>
@@ -41,7 +51,8 @@ function Collapse({ contenttitle, contenttext }) {
 }
 Collapse.propTypes = {
   contenttitle: PropTypes.string,
-  contenttext: PropTypes.string,
+  contenttext: PropTypes.array,
+  classCollapse: PropTypes.string,
 }
 
 export default Collapse

@@ -1,48 +1,70 @@
 @import "../../assets/variable.scss";
 
-.slidecontenair {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1440px;
-  width: 1240px;
-  height: 415px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 30px;
+.slidershow {
+  position: relative;
 
-  @media (max-width: 1024px) {
+  .slidecontenair {
+    position: relative;
+    z-index: 1;
+    max-width: 1240px;
     width: 100%;
-  }
-  @media (max-width: 768px) {
-    width: 335px;
-    height: 255px;
-  }
-  &_arrow {
-    border: none;
-    background: none;
-    padding: 23px;
-    &-img {
-      width: 46.68px;
-      height: 79.2px;
-      @media (max-width: 1024px) {
-        width: 32px;
-        height: 60px;
-      }
-      @media (max-width: 768px) {
-        width: 12px;
-        height: 20px;
-      }
+    height: 415px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      width: 335px;
+      height: 255px;
     }
   }
-  &_number {
-    color: white;
-    padding-top: 358px;
-    font-family: $main-font;
-    font-size: 18px;
-    font-weight: 500;
-    @media (max-width: 768px) {
+  .slidedetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    &:active + .slidecontenair {
+      transform: translate(-100%, 0%);
+    }
+
+    &_arrow {
+      border: none;
+      background: none;
+      padding: 50px 23px 0px 23px;
+
+      &--img {
+        width: 46.68px;
+        height: 79.2px;
+        @media (max-width: 1024px) {
+          width: 32px;
+          height: 60px;
+        }
+        @media (max-width: 768px) {
+          width: 12px;
+          height: 20px;
+        }
+      }
+    }
+    &_number {
+      color: white;
+      font-family: $main-font;
+      font-size: 18px;
+      font-weight: 500;
+      padding-top: 350px;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .nb-hide,
+    .arrow--hide {
       display: none;
     }
   }
