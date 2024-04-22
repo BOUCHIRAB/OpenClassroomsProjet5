@@ -22,14 +22,15 @@
     flex-flow: column;
     align-items: center;
     background-color: white;
-    margin: 0;
+    margin: 6px 0 5px 0;
     padding: 0px 0px 18px 0px;
   }
 }
 
 .gallery_card {
   position: relative;
-  padding: 25px 10px 25px 50px;
+  padding: 25px 30px 25px 30px;
+
   max-width: 340px;
   max-height: 340px;
   width: 100%;
@@ -38,7 +39,7 @@
     transform: scale(1.05);
   }
   @media (max-width: 768px) {
-    padding: 25px 0 25px 0;
+    padding: 16px 0 0px 0;
   }
   .imggallery {
     position: relative;
@@ -70,12 +71,12 @@
     );
 
     border-radius: 15px;
-    width: 340px;
+    width: 339px;
     height: 340px;
     border-radius: 10px;
     position: absolute;
     z-index: 2;
-    bottom: 28px;
+    bottom: 26px;
     margin: 0;
     padding: 0px;
     @media (max-width: 768px) {
@@ -83,6 +84,7 @@
       height: 255px;
       margin: 0;
       padding: 0px;
+      bottom: 5px;
     }
   }
   .imggallery_title {

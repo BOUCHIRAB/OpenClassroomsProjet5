@@ -17,7 +17,11 @@ function Fiche() {
     }
   }, [])
 
-  return <Logement />
+  return (
+    <main>
+      <Logement />
+    </main>
+  )
 }
 
 export default Fiche

@@ -37,8 +37,8 @@
     @include collapse;
 
     @media (max-width: 768px) {
-      font-size: 12px;
-      padding: 8px 15px 4px 15px;
+      font-size: 13px;
+      padding: 7px 15px 7px 15px;
     }
     .btnsub_up {
       border: none;
@@ -76,8 +76,8 @@
   }
 
   .Apropos_collapse {
-    font-size: 8px;
-    padding: 15px 15px 15px 15px;
+    font-size: 24px;
+    padding: 13px 15px 10px 15px;
     @include collapse;
 
     @media (max-width: 768px) {
