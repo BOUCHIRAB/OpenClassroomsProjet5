@@ -23,11 +23,13 @@
   font-family: $main-font;
   width: 100%;
   @media (max-width: 768px) {
+    max-width: 1023px;
     margin: 0px 0 20px 0;
   }
 
   ul {
     margin: 0;
+    padding: 0 20px;
     list-style-type: none;
   }
 
@@ -81,8 +83,8 @@
     @include collapse;
 
     @media (max-width: 768px) {
-      font-size: 12px;
-      padding: 8px 15px 4px 15px;
+      font-size: 13px;
+      padding: 7px 15px 7px 15px;
     }
     .btnsub_up {
       border: none;

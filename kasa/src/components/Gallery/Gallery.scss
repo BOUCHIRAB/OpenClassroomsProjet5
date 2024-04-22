@@ -2,6 +2,9 @@
 
 .slidershow {
   position: relative;
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 
   .slidecontenair {
     position: relative;

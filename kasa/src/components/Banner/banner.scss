@@ -17,7 +17,6 @@
   @media (max-width: 768px) {
     width: 338px;
     height: 112px;
-    margin: 0;
     padding: 0;
     border-radius: 10px;
   }
@@ -52,8 +51,9 @@
   margin-bottom: 38px;
 
   @media (max-width: 768px) {
-    width: 335px;
     height: 111px;
     margin-bottom: 19px;
+    margin-top: 2px;
+    border-radius: 8px;
   }
 }
