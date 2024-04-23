@@ -1,5 +1,12 @@
 @import "../../assets/variable.scss";
 
+@mixin slidesize {
+  max-width: 1240px;
+  width: 100%;
+}
+@mixin mq768 {
+  width: 335px;
+}
 .slidershow {
   position: relative;
   @media (max-width: 768px) {
@@ -9,33 +16,27 @@
   .slidecontenair {
     position: relative;
     z-index: 1;
-    max-width: 1240px;
-    width: 100%;
+    @include slidesize;
     height: 415px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 30px;
     @media (max-width: 768px) {
-      width: 335px;
+      @include mq768;
       height: 255px;
     }
   }
   .slidedetails {
-    max-width: 1240px;
-    width: 100%;
+    @include slidesize;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: absolute;
     z-index: 2;
     @media (max-width: 768px) {
-      max-width: 335px;
+      @include mq768;
       top: 130px;
-    }
-
-    &:active + .slidecontenair {
-      transform: translate(-100%, 0%);
     }
 
     &_arrow {

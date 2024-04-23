@@ -7,21 +7,21 @@ import { useEffect } from "react"
 
 function Fiche() {
   const { IdLogement } = useParams()
-  const navigate = useNavigate()
-
+  let navigate = useNavigate()
+  const logement = Logements.find(
+    (logementSelected) => IdLogement === logementSelected.id
+  )
   useEffect(() => {
-    const logement = Logements.find((logement) => logement.id === IdLogement)
-
     if (logement === undefined) {
-      navigate("/Data not find")
+      return navigate("/Fiche logement inexistante")
     }
   }, [])
 
-  return (
-    <main>
-      <Logement />
-    </main>
-  )
+  if (logement === undefined) {
+    return
+  } else {
+    return <Logement />
+  }
 }
 
 export default Fiche

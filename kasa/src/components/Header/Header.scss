@@ -5,13 +5,12 @@
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
-  margin: 44px 0 38px 0;
+  margin: 40px 0 38px 0;
   width: 100%;
   max-width: 1240px;
   @media (max-width: 768px) {
     margin: 20px 50px 15px 50px;
   }
-
   &_link {
     font-family: $main-font;
     font-size: 24px;

@@ -5,7 +5,7 @@ import "../../components/Banner/banner.scss"
 function Banner({ textBanner, classBanner }) {
   return (
     <div className={classBanner}>
-      <div className="bannertext">{textBanner}</div>
+      <div className={`${classBanner}_text`}>{textBanner}</div>
     </div>
   )
 }

@@ -11,12 +11,12 @@ function Card() {
           <Link to={`/Fiche/${logement.id}`}>
             <img
               src={logement.cover}
-              className="imggallery"
+              className="gallery_card--img"
               alt="House picture"
             ></img>
             <div className="gallery_card--shadow"></div>
           </Link>
-          <div className="imggallery_title">{logement.title}</div>
+          <div className="gallery_card--title">{logement.title}</div>
         </div>
       ))}
     </div>

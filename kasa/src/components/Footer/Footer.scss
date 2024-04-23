@@ -8,12 +8,11 @@
   max-width: 3000px;
   width: 100%;
   margin-top: 8px;
-
   @media (max-width: 768px) {
     padding: 0 0px 50px 0px;
     margin-top: 0px;
   }
-  .footer_text {
+  &_text {
     color: white;
     font-family: $main-font;
     font-size: 24px;
@@ -25,7 +24,7 @@
       text-align: center;
     }
   }
-  .footer_img {
+  &_img {
     width: 122px;
     height: 39.44px;
     margin-top: 66px;

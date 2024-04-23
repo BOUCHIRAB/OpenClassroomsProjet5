@@ -1,134 +1,137 @@
 @import "../../assets/variable.scss";
-.location {
+
+@mixin typflex {
+  display: flex;
+  flex-direction: row wrap;
+}
+@mixin widthsize {
   max-width: 1240px;
   width: 100%;
+}
+
+.locationselected {
+  @include widthsize;
   @media (max-width: 768px) {
     max-width: 335px;
   }
-}
-.locationdescription {
-  display: flex;
-  flex-direction: row wrap;
-  justify-content: space-between;
-  font-family: $main-font;
-  @media (max-width: 768px) {
-    flex-flow: column wrap;
-    margin-bottom: 11px;
-  }
-
-  .location {
-    &_title {
-      color: $main-color;
-      font-size: 36px;
-      font-weight: 500;
-      margin-top: 32px;
-      margin-bottom: 0;
-      @media (max-width: 768px) {
+  &_description {
+    @include typflex;
+    justify-content: space-between;
+    font-family: $main-font;
+    @media (max-width: 768px) {
+      flex-flow: column wrap;
+      margin-bottom: 11px;
+    }
+    .location {
+      &_title {
+        color: $main-color;
+        font-size: 36px;
+        font-weight: 500;
+        margin-top: 32px;
+        margin-bottom: 0;
+        @media (max-width: 768px) {
+          font-size: 18px;
+          margin-top: 9px;
+          line-height: 26px;
+        }
+      }
+      &_loc {
         font-size: 18px;
-        margin-top: 9px;
-        line-height: 26px;
+        font-weight: 500;
+        padding: 0;
+        margin-top: 6px;
+        margin-bottom: 22px;
+        @media (max-width: 768px) {
+          font-size: 14px;
+          margin-top: 8px;
+          margin-bottom: 0px;
+        }
+      }
+      &_tags {
+        @include typflex;
+        &--list {
+          font-weight: 700;
+          color: white;
+          font-size: 14px;
+          background: $main-color;
+          margin-bottom: 24px;
+          border-radius: 30px;
+          padding: 4px 40px 3px 40px;
+          margin-left: 0;
+          margin-right: 10px;
+          @media (max-width: 768px) {
+            font-size: 10px;
+            padding: 4px 10px 2px 10px;
+            margin-top: 11px;
+            margin-bottom: 0px;
+          }
+        }
       }
     }
-    &_loc {
-      font-size: 18px;
-      font-weight: 500;
-      padding: 0;
-      margin-top: 6px;
-      margin-bottom: 22px;
+    .locationhost {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 24px;
+      padding-right: 0px;
       @media (max-width: 768px) {
-        font-size: 14px;
-        margin-top: 8px;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 335px;
+        justify-content: space-between;
+        margin-top: 4px;
         margin-bottom: 0px;
       }
-    }
-    &_tags {
-      display: flex;
-      flex-flow: row wrap;
-      &--list {
-        font-weight: 700;
-        color: white;
-        font-size: 14px;
-        background: $main-color;
-        margin-bottom: 24px;
-        border-radius: 30px;
-        padding: 4px 40px 3px 40px;
-        margin-left: 0;
+
+      &_id {
+        display: flex;
+        flex-direction: row;
+        text-align: right;
+        margin-bottom: 2px;
+      }
+      &_name {
+        font-weight: 500;
+        font-size: 18px;
+        color: $main-color;
+        width: 77px;
         margin-right: 10px;
+        margin-bottom: 5px;
         @media (max-width: 768px) {
-          font-size: 10px;
-          padding: 4px 10px 2px 10px;
-          margin-top: 11px;
-          margin-bottom: 0px;
+          font-size: 12px;
+        }
+      }
+      &_picture {
+        border-radius: 100%;
+        width: 64px;
+        height: 64px;
+        @media (max-width: 768px) {
+          width: 32px;
+          height: 32px;
+          margin-top: 10px;
         }
       }
     }
   }
-  .locationhost {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 24px;
-    padding-right: 0px;
-    max-width: 1240px;
-    width: 100%;
+
+  &_details {
+    @include typflex;
+    justify-content: space-between;
+    padding-bottom: 12px;
     @media (max-width: 768px) {
-      flex-direction: row-reverse;
-      flex-wrap: wrap;
-      align-items: center;
-      max-width: 335px;
-      justify-content: space-between;
-      margin-top: 4px;
-      margin-bottom: 0px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      padding-bottom: 6px;
+      padding-top: 3px;
     }
 
-    &_id {
-      display: flex;
-      flex-direction: row;
-      text-align: right;
-      margin-bottom: 2px;
-    }
-    &_name {
-      font-weight: 500;
-      font-size: 18px;
-      color: $main-color;
-      width: 77px;
-      margin-right: 10px;
-      margin-bottom: 5px;
+    span {
+      max-width: 582px;
+      width: 100%;
       @media (max-width: 768px) {
-        font-size: 12px;
+        max-width: 335px;
       }
-    }
-    &_picture {
-      border-radius: 100%;
-      width: 64px;
-      height: 64px;
-      @media (max-width: 768px) {
-        width: 32px;
-        height: 32px;
-        margin-top: 10px;
-      }
-    }
-  }
-}
-
-.locationdetail {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 12px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-bottom: 6px;
-    padding-top: 3px;
-  }
-
-  span {
-    max-width: 582px;
-    width: 100%;
-    @media (max-width: 768px) {
-      max-width: 335px;
     }
   }
 }

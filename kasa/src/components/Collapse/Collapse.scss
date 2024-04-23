@@ -1,8 +1,7 @@
 @import "../../assets/variable.scss";
 
-@mixin collapse {
+@mixin collapseform {
   width: 100%;
-  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,7 +13,12 @@
   border-radius: 10px;
 }
 
-.accordion {
+@mixin mq768 {
+  font-size: 13px;
+  padding: 7px 15px 7px 15px;
+}
+
+.collapse {
   border-radius: 5px;
   overflow: hidden;
   max-width: 1023px;
@@ -27,114 +31,51 @@
     margin: 0px 0 20px 0;
   }
 
-  ul {
-    margin: 0;
-    padding: 0 20px;
-    list-style-type: none;
-  }
-
   .logement_collapse {
+    @include collapseform;
     font-size: 18px;
     padding: 15px 15px 15px 15px;
-    @include collapse;
-
     @media (max-width: 768px) {
-      font-size: 13px;
-      padding: 7px 15px 7px 15px;
-    }
-    .btnsub_up {
-      border: none;
-      background: $main-color;
-      margin-right: 2em;
-      transition: transform 330ms ease-in-out;
-      &:active {
-        transform: rotate(0.5turn);
-      }
-      img {
-        @media (max-width: 768px) {
-          width: 15px;
-          width: 15px;
-        }
-      }
-    }
-
-    .btnsub_down {
-      border: none;
-      background: $main-color;
-      margin-right: 2em;
-      transition: transform 330ms ease-in-out;
-      transform: rotate(0.5turn);
-      &:active {
-        transform: rotate(0.5turn);
-      }
-
-      img {
-        @media (max-width: 768px) {
-          width: 15px;
-          width: 15px;
-        }
-      }
+      @include mq768;
     }
   }
-
   .Apropos_collapse {
+    @include collapseform;
     font-size: 24px;
     padding: 13px 15px 10px 15px;
-    @include collapse;
-
     @media (max-width: 768px) {
-      font-size: 13px;
-      padding: 7px 15px 7px 15px;
+      @include mq768;
     }
-    .btnsub_up {
-      border: none;
-      background: $main-color;
-      margin-right: 2em;
-      transition: transform 330ms ease-in-out;
-      &:active {
-        transform: rotate(0.5turn);
-      }
-      img {
-        @media (max-width: 768px) {
-          width: 15px;
-          width: 15px;
-        }
-      }
-    }
-
-    .btnsub_down {
-      border: none;
-      background: $main-color;
-      margin-right: 2em;
-      transition: transform 330ms ease-in-out;
+  }
+  &_down {
+    transform: rotate(0.5turn);
+  }
+  &_up,
+  &_down {
+    margin-right: 32px;
+    transition: transform 330ms ease-in-out;
+    &:active {
       transform: rotate(0.5turn);
-      &:active {
-        transform: rotate(0.5turn);
-      }
-
-      img {
-        @media (max-width: 768px) {
-          width: 15px;
-          width: 15px;
-        }
+    }
+    img {
+      @media (max-width: 768px) {
+        width: 15px;
+        width: 15px;
       }
     }
   }
 
-  .btnOpen {
+  .collapse_open {
     background-color: rgb(248, 248, 248);
     list-style-type: none;
     padding-bottom: 20px;
-  }
 
-  .btnOpen > span {
-    display: block;
-    padding-top: 20px;
+    & > span {
+      display: block;
+      padding-top: 20px;
+    }
   }
-  .btnClose > span {
+  .collapse_close > span {
     display: none;
   }
 }
-
-//Quand click btn => faire ajout class "open" : class qui affiche le texte avec condition si class pas déja affecté
-//sinon class "closed" si déjà ouvert
