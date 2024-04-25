@@ -7,11 +7,12 @@ function Apropos() {
   return (
     <main>
       <Banner textBanner="" classBanner="bannerApropos" />
-      {Aproposcontent.map((content) => (
+      {Aproposcontent.map((content, i) => (
         <Collapse
           key={`${content.index}-${content.title}`}
           contenttitle={content.title}
           contenttext={[content.text]}
+          indexcollapse={i}
           classCollapse="Apropos_collapse"
         />
       ))}

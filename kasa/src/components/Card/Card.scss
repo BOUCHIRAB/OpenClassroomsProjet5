@@ -17,7 +17,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 43px 0px 40px 0px;
+  margin: 43px 0px 0px 0px;
   padding-top: 31px;
   padding-bottom: 20px;
   background-color: #f6f6f6;
@@ -30,7 +30,7 @@
     flex-flow: column;
     align-items: center;
     background-color: white;
-    margin: 6px 0 0px 0;
+    margin: 6px 0 5px 0;
     padding: 0px 0px 18px 0px;
   }
 
@@ -71,7 +71,7 @@
       @include imgform;
       position: absolute;
       z-index: 2;
-      bottom: 26px;
+      bottom: 25px;
       @include spacing;
       @media (max-width: 768px) {
         @include mq768;

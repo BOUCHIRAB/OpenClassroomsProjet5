@@ -10,7 +10,7 @@ function Gallery({ IdLogement }) {
 
   return Logements.map((logement) =>
     IdLogement === logement.id ? (
-      <div key={logement.id} className="slidershow">
+      <article key={logement.id} className="slidershow">
         <div className="slidedetails">
           <button
             className={
@@ -63,7 +63,7 @@ function Gallery({ IdLogement }) {
             backgroundImage: `url(${logement.pictures[ipicture]})`,
           }}
         ></div>
-      </div>
+      </article>
     ) : null
   )
 }

@@ -33,7 +33,8 @@ function Collapse({ contenttitle, contenttext, classCollapse }) {
             onClick={() =>
               setIsOpen(true) &
               setClassState("collapse_open") &
-              setClassArrow("collapse_up")
+              setClassArrow("collapse_up") &
+              console.log(isOpen)
             }
           >
             <img src={vector} alt="vector"></img>

@@ -15,10 +15,10 @@ function Logement() {
   )
 
   return (
-    <div key={logement.id} className="locationselected">
+    <section key={logement.id} className="locationselected">
       <Gallery IdLogement={logement.id} />
 
-      <div key={logement.title} className="locationselected_description">
+      <article key={logement.title} className="locationselected_description">
         <div className="location">
           <h1 className="location_title">{logement.title}</h1>
           <h2 className="location_loc">{logement.location}</h2>
@@ -42,8 +42,8 @@ function Logement() {
           </div>
           <Rating props={logement.rating} />
         </div>
-      </div>
-      <div className="locationselected_details">
+      </article>
+      <article className="locationselected_details">
         <span>
           <Collapse
             contenttitle="Description"
@@ -61,8 +61,8 @@ function Logement() {
             classCollapse="logement_collapse"
           />
         </span>
-      </div>
-    </div>
+      </article>
+    </section>
   )
 }
 

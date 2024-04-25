@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 function Card() {
   return (
-    <div className="gallery">
+    <section className="gallery">
       {Logements.map((logement) => (
         <div className="gallery_card" key={logement.id}>
           <Link to={`/Fiche/${logement.id}`}>
@@ -19,7 +19,7 @@ function Card() {
           <div className="gallery_card--title">{logement.title}</div>
         </div>
       ))}
-    </div>
+    </section>
   )
 }
 

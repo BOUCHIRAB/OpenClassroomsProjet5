@@ -11,12 +11,13 @@
   position: relative;
   overflow: hidden;
   @media (max-width: 768px) {
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .slidecontenair {
     position: relative;
     z-index: 1;
+    margin-top: 12px;
     @include slidesize;
     height: 415px;
     background-repeat: no-repeat;
@@ -28,6 +29,7 @@
     @media (max-width: 768px) {
       @include mq768;
       height: 255px;
+      border-radius: 10px;
     }
   }
   .slidedetails {
@@ -48,7 +50,7 @@
     &_arrow {
       border: none;
       background: none;
-      padding: 0px 20px 0px 20px;
+      padding: 30px 20px 0px 20px;
 
       &--img {
         width: 46.68px;

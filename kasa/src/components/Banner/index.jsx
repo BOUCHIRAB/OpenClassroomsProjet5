@@ -4,9 +4,9 @@ import "../../components/Banner/banner.scss"
 
 function Banner({ textBanner, classBanner }) {
   return (
-    <div className={classBanner}>
+    <aside className={classBanner}>
       <div className={`${classBanner}_text`}>{textBanner}</div>
-    </div>
+    </aside>
   )
 }
 Banner.propTypes = {
