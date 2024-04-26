@@ -24,7 +24,6 @@
     background-position: center;
     background-size: cover;
     border-radius: 30px;
-    transition: transform 330ms ease-in-out;
 
     @media (max-width: 768px) {
       @include mq768;
@@ -39,9 +38,7 @@
     justify-content: space-between;
     position: absolute;
     z-index: 2;
-    &:active + .slidecontenair {
-      transform: translatex(100%);
-    }
+
     @media (max-width: 768px) {
       @include mq768;
       top: 130px;

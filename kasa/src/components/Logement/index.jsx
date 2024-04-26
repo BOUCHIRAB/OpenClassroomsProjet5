@@ -3,13 +3,11 @@ import Collapse from "../Collapse/"
 import Gallery from "../Gallery/"
 import { Logements } from "../../datas/Logements"
 import { useParams } from "react-router-dom"
-//import React, { useState } from "react"
 import React from "react"
 import "./Fiche.scss"
 
 function Logement() {
   const { IdLogement } = useParams()
-  //const [logementSelected, setlogementSelected] = useState([])
   const logement = Logements.find(
     (logementSelected) => logementSelected.id === IdLogement
   )

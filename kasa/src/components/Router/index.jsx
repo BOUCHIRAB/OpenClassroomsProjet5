@@ -6,6 +6,7 @@ import Error from "../../pages/Error/"
 import Apropos from "../../pages/Apropos/"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
+
 function Router() {
   return (
     <BrowserRouter>
