@@ -4,10 +4,12 @@
   height: 340px;
   border-radius: 10px;
 }
+
 @mixin spacing {
   margin: 0;
   padding: 0;
 }
+
 @mixin mq768 {
   width: 335px;
   height: 255px;

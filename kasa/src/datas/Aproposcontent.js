@@ -2,7 +2,7 @@ export const Aproposcontent = [
   {
     title: "Fiabilité",
     text:
-      "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.",
+      "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.",
   },
   {
     title: "Respect",
@@ -12,7 +12,7 @@ export const Aproposcontent = [
   {
     title: "Service",
     text:
-      "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.",
+      "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
   },
   {
     title: "Sécurité",
